@@ -449,9 +449,8 @@ export class GettingStartedPage extends EditorPane {
 			}
 			case 'nextSection': {
 				const next = this.currentWalkthrough?.next;
-				if (next) {
+				if (!next) {
 					this.prevWalkthrough = this.currentWalkthrough;
-					this.scrollToCategory(next);
 				} else {
 					console.error('Error scrolling to next section of', this.currentWalkthrough);
 				}
